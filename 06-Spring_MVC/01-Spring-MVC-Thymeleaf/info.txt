@@ -1,0 +1,31 @@
+                Spring Boot MVC with thymeleaf
+
+    In this programming, we have been learning some topics, they are
+        1.Thymeleaf :
+            thymeleaf is the template engine. it processed where the view page for the java application.
+
+        2. How to add and use the Thymeleaf in the spring boot framework :
+            In spring boot, Thymeleaf is easily used to add the thymeleaf expression on each HTML files..
+            that expression is xmlns:th="http://www.thymeleaf.org.
+
+        3. And then, where the css file is placed ?
+            In spring, css file is placed on the resource/static/css/demo.css. here, css/demo.css will created by the
+            developer.
+
+        4. what is the Model View Controller (MVC) ? How spring MVC work behind the server ?
+            ref link: https://onedrive.live.com/edit?action=editnew&id=20B468C13564770A!4820&
+            resid=20B468C13564770A!4820&ithint=file%2cdocx&ct=1719651777033&wdNewAndOpenCt=1719651776561&wdOrigin=OFFICECOM-WEB
+            .MAIN.NEW&wdPreviousSessionSrc=HarmonyWeb&wdPreviousSession=be37ea55-6813-4069-b283-78fbc41b121a&wdo=
+            2&cid=20b468c13564770a
+
+        5. Adding data to spring MVC model
+
+        6. to practice coding how to GET and POST request mapping and method.
+
+        7. to practice the code how to get the parameter and send back to the model by appropriate
+            html file for display the data.
+
+        8. learn annotation
+                - @RequestParam :- this annotation is used instead of getting the parameter using HttpServletRequest.
+                - @PostMapping.
+                - @GetMapping.

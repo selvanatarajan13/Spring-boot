@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <p>Confirmed student name :
+            <span th:text="${students.firstName} + ' ' + ${students.lastName} "></span>
+        </p>
+        <p>He is coming from <i th:text="${students.country}"></i></p>
+        <p>Is the Student is graduate in UG ? <span th:text="${students.education}"></span></p>
+        <p>Programming language known's are : </p>
+        <ul th:each="theLanguages : ${students.languages}">
+            <li th:text="${theLanguages}"></li>
+        </ul>
+    </div>
+</body>
+</html>

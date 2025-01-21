@@ -1,0 +1,9 @@
+In this section, i have been learning Pojo class, Path Variables and Exception handling..
+
+
+        Development process of Exception handling
+steps:
+    1. Create a custom error response class or entity
+    2. Create a custom exception class
+    3. Update exception REST service to throw exception if student not found
+    4. Add an exception handler using @ExceptionHandler annotation

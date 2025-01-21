@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div>
+        <h3>Welcome to Java Spring Boot.</h3>
+        <hr>
+        <p>Hello <span sec:authentication="principal.username"></span></p>
+        <p>Role : <span sec:authentication="principal.authorities"></span></p>
+        <br>
+        <div sec:authorize="hasRole('MANAGER')">
+            <p>Manager only access..<a th:href="@{/manager}">click</a></p>
+        </div>
+        <div sec:authorize="hasRole('ADMIN')">
+            <p>Admin only access..<a th:href="@{/admin}">click</a></p>
+        </div>
+        <hr>
+        <span th:text="${datetime}"></span>
+        <hr>
+        <form th:action="@{/logout}" method="POST">
+            <input type="submit" th:value="logout">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+                    Spring Boot MVC Form of Data Binding
+
+    In this programming, I have been learning the concepts of
+
+    1. Data Binding :
+        it is the process of automatically setting and retrieve the data from the java object or
+        bean.
+    2. learn Thymeleaf tags which include
+        - th means thymeleaf tag
+        - th:field :- This attribute is used to bind input fields to properties in a bean class
+                      .i.e. model
+        - th:action
+        - th:object
+        - th:text :- used to display the data from the model for user
+
+        th:field="*{only define attributeName}" using this syntax for th:field="${object.attributeName}
+
+    3. learn annotation
+        - @ModelAttribute :-
+            In spring boot, @ModelAttribute annotation is used to bind the data from the HTTP
+            request to the javascript object, making it easier to work with form data and other
+            request parameter.
+
+    4. working on thymeleaf with form - formlink : https://frontbackend.com/thymeleaf/working-with-forms-in-thymeleaf
+
+    5. Using Thymeleaf tag
+
+    6. How to send the List type of data over the Request.
+
+Development process :
+    1. Create Student class (model) :-
+            - The 'Students' class is a model that represents student data.
+            - it contain fields.
+            - Each field has corresponding getter and setter method, to allowing get and set the values
+              for these attributes.
+
+
+    2. Create student controller class :- Note
+
+            - In spring controller, Before you show the form you must add the 'Model’.
+
+            - This is the bean that will hold form data for the data binding.
+
+    3. Create HTML file
+
+    4. Create form processing code in spring controller
+        - when the form is submitted by the user, spring MVC binds the form data to the "Students" object.
+        - And then, The binded student object data is displayed by use of Thymeleaf tag.
+
+    5. Create another HTML form to show the processing form resut.

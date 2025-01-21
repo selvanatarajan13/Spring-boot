@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <p>The Student confirmed : <span th:text="${customer.firstName} + ' ' + ${customer.lastName}"></span></p>
+        <p>His 12<sup>th</sup> mark is <span th:text="${customer.mark}"></span></p>
+        <p>Your email saved successfully : <span th:text="${customer.email}"></span></p>
+        <p>Your password saved successfully : <span th:text="${customer.password}"></span></p>
+    </div>
+</body>
+</html>

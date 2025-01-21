@@ -1,0 +1,19 @@
+    REST_API SERVICE PROJECT DEVELOPMENT PROCESS FOR CRUD OPERATION
+
+1.Update db configs in application properties
+2.create employee entity
+3.create dao interface
+4.create dao implementation
+5.create a RESTController to use DAO
+
+
+If you have using CRUD operation without need more code or instead of using DAO layer and boiler of codes, then you
+simply using a Spring-Data=JPA. This is the Magic method and it gives CRUD operation free for you..
+
+In order to using Spring-Data-JPA using CRUD operation, the developement process include,
+steps
+        1. Extend JpaRepository interface
+        2. Use your Reposotory in your app
+
+ JPA Repository provides the interface: JpaRepository
+ Expose methods (some by inheritance from parents)

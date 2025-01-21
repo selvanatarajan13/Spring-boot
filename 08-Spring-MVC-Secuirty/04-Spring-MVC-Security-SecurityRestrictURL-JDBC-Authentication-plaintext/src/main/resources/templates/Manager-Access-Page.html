@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>Hello Manager..<span sec:authentication="principal.username"></span></h3>
+    <p>Today, we're going to check employee works..</p>
+    <a th:href="@{/}">Back to Dashboard</a>
+</body>
+</html>

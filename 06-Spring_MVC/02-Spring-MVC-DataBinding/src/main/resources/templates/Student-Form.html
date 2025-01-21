@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form th:action="@{/form/confirm-student}" method="POST" th:object="${students}">
+
+        <label>First Name : </label>
+        <input type="text" th:field="*{firstName}">
+        <br><br>
+
+        <label>Last Name : </label>
+        <input type="text" th:field="${students.lastName}">
+        <br><br>
+
+        <label>Country : </label>
+        <select th:field="*{country}">
+
+            <!--      Command on this hard code      -->
+<!--            <option th:value="India">India</option>-->
+<!--            <option th:value="USA">USA</option>-->
+<!--            <option th:value="Russia">Russia</option>-->
+            <option
+                    th:each="theCountries : ${countries}"
+                    th:text="${theCountries}"
+                    th:value="${theCountries}" ></option>
+        </select>
+        <br><br>
+
+        <label>Have you completed your UG ? </label>
+        <input type="radio" th:field="*{education}" th:value="Yes">Yes</input>
+        <input type="radio" th:field="*{education}" th:value="No">No</input>
+        <br><br>
+
+        <label>What are the programming languages known : </label>
+        <input type="checkbox" th:field="*{languages}"
+               th:each="myLanguages : ${languages}"
+               th:text="${myLanguages}"
+               th:value="${myLanguages}">
+        <br><br>
+
+        <input type="submit" th:value="submit">
+    </form>
+</body>
+</html>

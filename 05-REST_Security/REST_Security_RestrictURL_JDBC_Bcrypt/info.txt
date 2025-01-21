@@ -1,0 +1,36 @@
+In this programming, I've been learning REST_API security include
+    1. Basic Security configuration on application property and Hardcode in user detail
+    2. Restrict URL based on roles using security filter chain method
+    3. JDBC authentication
+    4. Bycrypt encryption
+    5. JDBC authentication custom table
+
+
+UserDetailManager is a type of method to store the username, password and roles or to store logging credential.
+it return the InMemoryUserDetailManager
+
+spring security, JDBC and Basic spring config are used some algorithms that help encrypt the password..
+for example,
+        {noop}fun1234 - means no operation on the password
+        {bcrypt}fun1234 - means
+
+
+        JDBC Authendication development process
+   In spring boot, JDBC is the advanced future to logging on site. it interact and retrieve the credential
+from database tables. In this programming first we're going to use the predefined tables so we are create som
+steps, that are
+    1. Develop SQL queries to set up the dabase tables
+    2. Add database support to MAVEN POM file
+    3. Create a JDBC property file
+    4. Update spring security config to use JDBC
+ That's all.....
+
+
+            SQL
+ The UNIQUE constraint ensures that all values in a column are different.
+
+ Both the UNIQUE and PRIMARY KEY constraints provide a guarantee for uniqueness for a column or set of columns.
+
+ A PRIMARY KEY constraint automatically has a UNIQUE constraint.
+
+ However, you can have many UNIQUE constraints per table, but only one PRIMARY KEY constraint per table.
