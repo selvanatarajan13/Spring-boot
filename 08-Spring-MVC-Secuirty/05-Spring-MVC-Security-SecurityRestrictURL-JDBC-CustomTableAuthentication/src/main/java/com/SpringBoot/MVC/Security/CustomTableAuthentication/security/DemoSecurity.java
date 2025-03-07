@@ -2,6 +2,7 @@ package com.SpringBoot.MVC.Security.CustomTableAuthentication.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.provisioning.JdbcUserDetailsManager;
@@ -15,16 +16,16 @@ import javax.sql.DataSource;
 public class DemoSecurity {
 
     @Bean
-    // custom table use to retrieve the username, password and roles
+    // custom table uses to retrieve the username, password and roles
     public UserDetailsManager userDetailsManager(DataSource dataSource) throws Exception {
         JdbcUserDetailsManager theUser = new JdbcUserDetailsManager(dataSource);
 
-        // define query to retrieve a user by username
+        // define a query to retrieve a user by username
         theUser.setUsersByUsernameQuery(
                 "select username, password, enabled from members where username = ?"
         );
 
-        // define query to retrieve a roles by username
+        // define a query to retrieve a roles by username
         theUser.setAuthoritiesByUsernameQuery(
                 "select username, authority from roles where username = ?"
         );

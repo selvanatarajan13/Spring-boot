@@ -18,39 +18,39 @@ import javax.sql.DataSource;
 public class DemoSecurityConfig {
 
     // create credential to logging on the site
-//    @Bean
-//    public InMemoryUserDetailsManager userDetailsManager() {
-//
-//        UserDetails mahend = User.builder()
-//                .username("mahendran@gmail.com")
-//                .password("{noop}fun1234")
-//                .roles("EMPLOYEE")
-//                .build();
-//
-//        UserDetails SELVA = User.builder()
-//                .username("selvanatarajan13@gmail.com")
-//                .password("{noop}fun1234")
-//                .roles("EMPLOYEE","MANAGER")
-//                .build();
-//
-//        UserDetails John = User.builder()
-//                .username("john@gmail.com")
-//                .password("{noop}fun1234")
-//                .roles("EMPLOYEE","MANAGER","ADMIN")
-//                .build();
-//
-//        return new InMemoryUserDetailsManager(mahend,SELVA, John);
-//
-//    }
+    @Bean
+    public InMemoryUserDetailsManager userDetailsManager() {
+
+        UserDetails mahend = User.builder()
+                .username("mahendran@gmail.com")
+                .password("{noop}fun1234")
+                .roles("EMPLOYEE")
+                .build();
+
+        UserDetails SELVA = User.builder()
+                .username("selvanatarajan13@gmail.com")
+                .password("{noop}fun1234")
+                .roles("EMPLOYEE","MANAGER")
+                .build();
+
+        UserDetails John = User.builder()
+                .username("john@gmail.com")
+                .password("{noop}fun1234")
+                .roles("EMPLOYEE","MANAGER","ADMIN")
+                .build();
+
+        return new InMemoryUserDetailsManager(mahend,SELVA, John);
+
+    }
 
 
 
 
     // add JDBC support
-    @Bean
-    public UserDetailsManager userDetailsManager(DataSource dataSource) {
-        return new JdbcUserDetailsManager(dataSource);
-    }
+//    @Bean
+//    public UserDetailsManager userDetailsManager(DataSource dataSource) {
+//        return new JdbcUserDetailsManager(dataSource);
+//    }
 
 
     // Restrict the CRUD operation based on URL restriction

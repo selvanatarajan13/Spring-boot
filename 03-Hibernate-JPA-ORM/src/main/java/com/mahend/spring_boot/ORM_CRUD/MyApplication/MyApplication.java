@@ -4,6 +4,7 @@ import com.mahend.spring_boot.ORM_CRUD.MyApplication.dao.StaffDAO;
 import com.mahend.spring_boot.ORM_CRUD.MyApplication.dao.studentDAO;
 import com.mahend.spring_boot.ORM_CRUD.MyApplication.entity.Staff;
 import com.mahend.spring_boot.ORM_CRUD.MyApplication.entity.Students;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,6 +22,7 @@ public class MyApplication {
 	
 	@Bean
 	public CommandLineRunner commandLineRunner(studentDAO studentDAO) {
+
 		return runner -> {
 			System.out.println("Hello Java!..");
 //			createStudent(studentDAO);
