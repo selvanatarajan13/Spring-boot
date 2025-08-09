@@ -20,9 +20,7 @@ public class EmployeeRestController {
 
     @GetMapping("/employees")
     public List<Employee> getEmployee() {
-
         theEmployees = employeeService.findAll();
-
         return theEmployees;
     }
 
@@ -30,7 +28,6 @@ public class EmployeeRestController {
     @GetMapping("/employees/{employeeId}")
     public Employee getEmployeeById(@PathVariable int employeeId) {
         Employee theEmployee = employeeService.findById(employeeId);
-
         // check the employee id
         if (theEmployee == null) {
             throw new EmployeeNotFoundException("Employee not found - "+employeeId);
@@ -38,26 +35,21 @@ public class EmployeeRestController {
         return theEmployee;
     }
 
-    @PostMapping("/employees")
+    @PostMapping("/addEmployee")
     public Employee addNewEmployee(@RequestBody Employee theEmployee) {
-
-        theEmployee.setId(0);
         Employee newEmployee = employeeService.save(theEmployee);
-
         return newEmployee;
     }
 
-    @PutMapping("/employees")
+    @PutMapping("/updateEmployee")
     public Employee updateEmployee(@RequestBody Employee theEmployee) {
         Employee updateEmployee = employeeService.save(theEmployee);
-
         return updateEmployee;
     }
 
     @DeleteMapping("/employees/{employeeId}")
     public String deleteEmployeeId(@PathVariable int employeeId) {
         Employee deleteEmployee = employeeService.deleteById(employeeId);
-
         return "Employee Id deleted Successfull. ID - "+ employeeId;
     }
 

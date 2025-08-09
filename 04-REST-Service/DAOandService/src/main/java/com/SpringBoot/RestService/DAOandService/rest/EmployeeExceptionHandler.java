@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 public class EmployeeExceptionHandler {
 
-    // catch 404 Error exception
+    // catch 404 error exception
     @ExceptionHandler
     public ResponseEntity<EmployeeErrorResponse> handleException(EmployeeNotFoundException exception) {
         EmployeeErrorResponse error = new EmployeeErrorResponse();

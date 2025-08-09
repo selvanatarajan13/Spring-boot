@@ -26,7 +26,7 @@ public class OneToOneMapUniApplication {
 		};
 	}
 
-	// Uni directional
+	// Uni-directional
 	private void deleteInstructorById(AppDao appDao) {
 
 		int theId = 4;
@@ -35,7 +35,7 @@ public class OneToOneMapUniApplication {
 		System.out.println("Instructor ID deleted successfully.");
 	}
 
-	// Uni directional
+	// Uni-directional
 	private void findInstructorById(AppDao appDao) {
 
 		int theId = 3;

@@ -1,4 +1,4 @@
-package com.SpringBoot.RestService.DAOandService.security;
+package com.SpringBoot.RestService.DAOandService.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -8,33 +8,30 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
-import org.springframework.security.provisioning.JdbcUserDetailsManager;
-import org.springframework.security.provisioning.UserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
-import javax.sql.DataSource;
-
 @Configuration // this annotation will help to setup the security config
-public class DemoSecurityConfig {
+public class
+DemoSecurityConfig {
 
     // create credential to logging on the site
     @Bean
     public InMemoryUserDetailsManager userDetailsManager() {
 
         UserDetails mahend = User.builder()
-                .username("mahendran@gmail.com")
+                .username("mahendran")
                 .password("{noop}fun1234")
                 .roles("EMPLOYEE")
                 .build();
 
         UserDetails SELVA = User.builder()
-                .username("selvanatarajan13@gmail.com")
+                .username("selvanatarajan13")
                 .password("{noop}fun1234")
-                .roles("EMPLOYEE","MANAGER")
+                .roles("EMPLOYEE", "MANAGER")
                 .build();
 
         UserDetails John = User.builder()
-                .username("john@gmail.com")
+                .username("john")
                 .password("{noop}fun1234")
                 .roles("EMPLOYEE","MANAGER","ADMIN")
                 .build();
@@ -61,8 +58,8 @@ public class DemoSecurityConfig {
             configure
                     .requestMatchers(HttpMethod.GET, "/api/employees").hasRole("EMPLOYEE")
                     .requestMatchers(HttpMethod.GET, "/api/employees/**").hasRole("EMPLOYEE")
-                    .requestMatchers(HttpMethod.PUT, "/api/employees").hasRole("MANAGER")
-                    .requestMatchers(HttpMethod.POST, "/api/employees").hasRole("ADMIN")
+                    .requestMatchers(HttpMethod.PUT, "/api/updateEmployee").hasRole("MANAGER")
+                    .requestMatchers(HttpMethod.POST, "/api/addEmployee").hasRole("MANAGER")
                     .requestMatchers(HttpMethod.DELETE, "/api/employees/**").hasRole("ADMIN")
         );
 

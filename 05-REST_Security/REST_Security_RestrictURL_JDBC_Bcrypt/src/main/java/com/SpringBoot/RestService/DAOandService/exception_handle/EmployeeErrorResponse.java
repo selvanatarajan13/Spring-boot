@@ -1,4 +1,4 @@
-package com.SpringBoot.RestService.DAOandService.rest;
+package com.SpringBoot.RestService.DAOandService.exception_handle;
 
 public class EmployeeErrorResponse {
     private int status;

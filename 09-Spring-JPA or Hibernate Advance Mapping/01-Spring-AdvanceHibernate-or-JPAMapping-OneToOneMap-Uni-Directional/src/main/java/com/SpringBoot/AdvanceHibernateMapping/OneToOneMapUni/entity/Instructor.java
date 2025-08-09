@@ -27,7 +27,7 @@ public class Instructor {
     @JoinColumn(name = "instructor_detail_id")
     private InstructorDetail instructorDetail;
 
-    // constrcutor
+    // constructor
     public Instructor() {
 
     }

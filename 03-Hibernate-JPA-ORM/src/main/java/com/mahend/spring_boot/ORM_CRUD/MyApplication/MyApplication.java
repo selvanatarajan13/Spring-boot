@@ -53,7 +53,7 @@ public class MyApplication {
 //		data.setLastName("KE");
 //		data.setEmail("Abiram@gmail.com");
 //
-//		// save student object
+//		// save student as object
 //		System.out.println("Saving student object...");
 //		studentDAO.save(data);
 //
